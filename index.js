@@ -1,16 +1,19 @@
 function mostrarResultados(datos) {
-   const template = document.querySelector("#template");
-   const contenidos = document.querySelector(".contenidos");
-
+   let template = document.querySelector("#template");
+   let contenidos = document.querySelector(".contenidos");
+   
    for (let result of datos) {
-      const clone = document.importNode(template.content, true);
       const articleImg = template.content.querySelector(".article-img");
       const articleTitle = template.content.querySelector(".article-title");
+      const enlace = template.content.querySelector(".enlace");
+      const clone = document.importNode(template.content, true);
+      console.log(clone);
+      articleTitle.textContent = result.fields.appMisPelis;
+      articleImg.src = result.fields.linkImgPagina;
+      enlace.href = result.fields.linkDeArticle;
       contenidos.appendChild(clone);
       contenidos.removeChild(contenidos.firstChild);
-      articleTitle.textContent = result.fields.appMisPelis;
    }
-   console.log(contenidos);
 }
 
 function main() {
