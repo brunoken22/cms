@@ -1,18 +1,17 @@
 function mostrarResultados(datos) {
-   let template = document.querySelector("#template");
    let contenidos = document.querySelector(".contenidos");
-   
+
    for (let result of datos) {
+      let template = document.querySelector("#template");
       const articleImg = template.content.querySelector(".article-img");
       const articleTitle = template.content.querySelector(".article-title");
       const enlace = template.content.querySelector(".enlace");
-      const clone = document.importNode(template.content, true);
-      console.log(clone);
+      console.log(template);
       articleTitle.textContent = result.fields.appMisPelis;
       articleImg.src = result.fields.linkImgPagina;
       enlace.href = result.fields.linkDeArticle;
+      let clone = document.importNode(template.content, true);
       contenidos.appendChild(clone);
-      contenidos.removeChild(contenidos.firstChild);
    }
 }
 
@@ -25,7 +24,7 @@ function main() {
       })
 
       .then(function (result) {
-         mostrarResultados(result.items);
+         return mostrarResultados(result.items);
       });
 }
 
