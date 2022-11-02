@@ -1,0 +1,47 @@
+*{
+  font-family: 'Roboto';
+  box-sizing: border-box ;
+}
+.encabezado{
+   text-align: center;
+   margin-bottom: 50px;
+}
+.titulo{
+   font-size: 38px;
+}
+
+/* ------------- template --------------- */
+
+.articulos{
+   border: solid;
+   max-width: 400px;
+   box-sizing:content-box;
+   margin: 20px auto;
+
+}
+
+.article-img{
+   width: 100%;
+   height: 255px;
+}
+
+.article-informacion{
+   padding: 20px;
+}
+
+.article-description{
+   font-weight: 400;
+   font-size: 16px;
+}
+
+.mas-informacion{
+   margin-top: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+.mas-informacion a{
+   color: blue;
+   text-decoration: none;
+   font-weight: 700;
+}
