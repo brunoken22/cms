@@ -17,7 +17,7 @@ function mostrarResultados(datos) {
 
 function main() {
    fetch(
-      "https://preview.contentful.com/spaces/dehbm7ub5p2i/environments/master/entries?access_token=Nc9wuQJ4_aK-N9OcKM8RKUNArEGoe_EUqrxeQ2e2s5Y"
+      "https://preview.contentful.com/spaces/dehbm7ub5p2i/environments/master/entries?access_token=Nc9wuQJ4_aK-N9OcKM8RKUNArEGoe_EUqrxeQ2e2s5Y&content_type=cms"
    )
       .then(function (dato) {
          return dato.json();
